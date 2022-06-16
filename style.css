@@ -145,6 +145,11 @@
   width: 3rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  fill: var(--wp--preset--color--dark);
+}
+
+.drawerMenu__item.--social:hover {
+  fill: var(--wp--preset--color--medium-dark);
 }
 
 .drawerMenu__item.--social img {
@@ -154,7 +159,13 @@
 
 .drawerMenu__item a {
   display: block;
+  font-weight: 500;
+  color: var(--wp--preset--color--dark);
   text-decoration: none;
+}
+
+.drawerMenu__item a:hover {
+  color: var(--wp--preset--color--medium-dark);
 }
 
 .drawerMenu.--dark {

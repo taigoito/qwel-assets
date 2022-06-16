@@ -132,6 +132,11 @@ $siteBrandHeight:  48px !default;
       width: 3rem;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      fill: var(--wp--preset--color--dark);
+
+      &:hover {
+        fill: var(--wp--preset--color--medium-dark);
+      }
 
       img {
         width: 100%;
@@ -141,7 +146,13 @@ $siteBrandHeight:  48px !default;
 
     a {
       display: block;
+      font-weight: 500;
+      color: var(--wp--preset--color--dark);
       text-decoration: none;
+
+      &:hover {
+        color: var(--wp--preset--color--medium-dark);
+      }
     }
   }
 
