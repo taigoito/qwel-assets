@@ -27,9 +27,12 @@ export default class DrawerMenu {
 
     // .drawer__navicon
     this._navicon = document.createElement('span');
-    this._navicon.classList.add('drawer__navicon', 'responsiveColor');
-    this._navicon.dataset.icon = 'ei-navicon';
-    this._navicon.dataset.size = 'm';
+    this._navicon.classList.add('drawer__navicon', 'responsiveColor', 'icon');
+    //this._navicon.dataset.icon = 'ei-navicon';
+    //this._navicon.dataset.size = 'm';
+    const naviconImg = new Image();
+    naviconImg.src = '/data/plugins/discoverechizen-assets/assets/navicon.svg';
+    this._navicon.appendChild(naviconImg);
     this._drawer.appendChild(this._navicon);
 
     // .drawer__close

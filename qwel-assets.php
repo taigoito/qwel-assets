@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Qwel Assets
-Description: This is an asset when using the theme "Qwel".
+Plugin Name: Discover Echizen Assets
+Description: This is an asset when using the theme "Discover Echizen".
 Version: 1.0
 Requires PHP: 7.4
 Author: Taigo Ito
@@ -17,8 +17,8 @@ defined( 'ABSPATH' ) || exit;
 /*
  * プラグインのパス, URI
  */
-define( 'QWEL_ASSETS_DIR', WP_PLUGIN_DIR . '/qwel-assets/' );
-define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
+define( 'DISCOVERECHIZEN_ASSETS_DIR', WP_PLUGIN_DIR . '/discoverechizen-assets/' );
+define( 'DISCOVERECHIZEN_ASSETS_URI', WP_PLUGIN_URL . '/discoverechizen-assets/' );
 
 
 /*
@@ -26,18 +26,18 @@ define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
  */
 spl_autoload_register(
 	function( $classname ) {
-		if ( strpos( $classname, 'Qwel_Assets' ) === false ) return;
+		if ( strpos( $classname, 'DiscoverEchizen_Assets' ) === false ) return;
 		$classname = str_replace( '\\', '/', $classname );
-		$classname = str_replace( 'Qwel_Assets/', '', $classname );
-		$file      = QWEL_ASSETS_DIR . '/classes/' . $classname . '.php';
+		$classname = str_replace( 'DiscoverEchizen_Assets/', '', $classname );
+		$file      = DISCOVERECHIZEN_ASSETS_DIR . '/classes/' . $classname . '.php';
 		if ( file_exists( $file ) ) {
 			require $file;
 		}
 	}
 );
 
-class Qwel_Assets {
-  use \Qwel_Assets\Shortcodes;
+class DiscoverEchizen_Assets {
+  use \DiscoverEchizen_Assets\Shortcodes;
 		
 	public function __construct() {
     // ブロックスタイルを追加 (エディター)
@@ -57,7 +57,7 @@ class Qwel_Assets {
   public function add_block_styles() {
     // blockStyles.js
     wp_enqueue_script(
-      'qwel-block-styles',
+      'discoverechizen-block-styles',
       plugins_url( 'blockStyles.js', __FILE__ ),
       [ 'wp-blocks' ]
     );
@@ -74,7 +74,7 @@ class Qwel_Assets {
 
 		// style.css
 		wp_enqueue_style(
-			'qwel-style',
+			'discoverechizen-style',
 			plugins_url( 'style.css', __FILE__ ),
 			[],
       $version
@@ -83,7 +83,7 @@ class Qwel_Assets {
     // init.js (フロントエンドのみ)
     if ( !is_admin() ) {
       wp_enqueue_script(
-        'qwel-init',
+        'discoverechizen-init',
         plugins_url( 'init.js', __FILE__ ),
         [],
         $version,
@@ -95,4 +95,4 @@ class Qwel_Assets {
 
 }
 
-new Qwel_Assets();
+new DiscoverEchizen_Assets();

@@ -11,19 +11,19 @@ new BackToTop();
 
 // Drawer Menu
 import DrawerMenu from './_drawerMenu.js';
-new DrawerMenu();
+new DrawerMenu({darkMode: true});
 
 // Embed
-import Embed from './_embed.js';
-new Embed();
+//import Embed from './_embed.js';
+//new Embed();
 
 // Evil Icons
 import EvilIcons from './_evilIcons.js';
 new EvilIcons();
 
 // Fader
-import Fader from './_fader.js';
-new Fader();
+//import Fader from './_fader.js';
+//new Fader();
 
 // Preloader
 import Preloader from './_preloader.js';

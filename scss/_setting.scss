@@ -1,20 +1,19 @@
 // Setting
 
 // Colors
-$darkest:              var(--wp--preset--color--darkest, #262626) !default;
-$darker:               var(--wp--preset--color--darker, #4d4d4d) !default;
-$dark:                 var(--wp--preset--color--dark, #808080) !default;
-$light:                var(--wp--preset--color--light, #b3b3b3) !default;
-$lighter:              var(--wp--preset--color--lighter, #d9d9d9) !default;
-$lightest:             var(--wp--preset--color--lightest, #ffffff) !default;
-$primary:              var(--wp--preset--color--primary, #3399cc) !default;
-$primaryLight:         var(--wp--preset--color--primary-light, #85c2e0) !default;
-$secondary:            var(--wp--preset--color--secondary, #cc334b) !default;
-$secondaryLight:       var(--wp--preset--color--secondary-light, #e08594) !default;
 $black:                var(--wp--preset--color--black, #000000) !default;
+$dark:                 var(--wp--preset--color--dark, #333333) !default;
+$mediumDark:           var(--wp--preset--color--medium-dark, #666666) !default;
+$mediumLight:          var(--wp--preset--color--medium-light, #999999) !default;
+$light:                var(--wp--preset--color--light, #cccccc) !default;
+$primaryDark:          var(--wp--preset--color--primary-dark, #18aada) !default;
+$primary:              var(--wp--preset--color--primary, #37bef0) !default;
+$primaryLight:         var(--wp--preset--color--primary-light, #d1f0fc) !default;
+$secondary:            var(--wp--preset--color--secondary, #9bcb6b) !default;
+$tertiary:             var(--wp--preset--color--tertiary, #ff69b4) !default;
 $white:                var(--wp--preset--color--white, #ffffff) !default;
-$linkColor:            $darker !default;
-$linkHoverColor:       $primary !default;
+$linkColor:            $primary !default;
+$linkHoverColor:       $primaryDark !default;
 
 // Spacing
 $spacingValues:  (
@@ -52,17 +51,17 @@ $backBtnHoverBg:       $primaryLight;
 $backBtnHoverColor:    $white;
 
 // Drawer Menu
-$drawerAlwaysShown:    false !default;
-$drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
-$drawerHeight:         48px !default;
-$drawerMenuDarkBg:     $primary !default;
+$drawerAlwaysShown:    true !default;
+$drawerPad:            1rem !default;  // calc関数を使用するためCSS変数を避ける
+$drawerHeight:         64px !default;
+$drawerMenuDarkBg:     $primaryDark !default;
 
 // Preloader
 $spinnerWidth:         48px !default;
 $spinnerBarsCount:     12 !default;
 $spinnerBarsBg:        $white !default; // rgba関数を使用するためCSS変数を避ける
 $preloaderHeight:      100vh !default;
-$preloaderBg:          $primary !default;
+$preloaderBg:          $primaryDark !default;
 
 // Slider
 $sliderAspectRatio:    5 / 8 !default;

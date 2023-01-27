@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Assets;
+namespace DiscoverEchizen_Assets;
 
 trait Shortcodes {
   // ショートコード登録
@@ -19,15 +19,18 @@ trait Shortcodes {
   public function get_title( $atts ) {
 
     $wp_obj  = get_queried_object();
-    $title = '';
+    $title   = ''; // 小文字・h1タグ
+    $slug    = ''; // 大文字
 
     // 固定ページ
     if ( is_home() || is_page() ) {
       $title = $wp_obj->post_title;
+      $slug  = $wp_obj->post_name;
 
     // 個別投稿ページ
     } else if ( is_single() ) {
-      $title = 'ブログ';
+      $title = 'ブログ&ニュース';
+      $slug  = 'blog and news';
 
     // 日付別
     } else if ( is_date() ) {
@@ -41,25 +44,46 @@ trait Shortcodes {
     // 投稿者アーカイブ
     } else if ( is_author() ) {
       $title = '著者:' . $wp_obj->display_name;
+      $slug  = 'author';
     
     // タームアーカイブ
     } else if ( is_archive() ) {
       $title = $wp_obj->name;
+      $slug  = $wp_obj->slug;
 
     // 検索結果ページ
     } else if ( is_search() ) {
       $title = '検索:' . get_search_query();
+      $slug  = 'searching';
 
     // 404ページ
     } else if ( is_404() ) {
-      $title = '記事が見つかりません';
+      $title = 'Not Found';
+      $slug  = '404';
 
     // その他
     } else {
-      $title = 'ブログ';
+      $title = 'ブログ&ニュース';
+      $slug  = 'blog and news';
     }
 
-    return '<h1>' . $title . '</h1>';
+    // 成形
+    $slug  = str_replace( '-', ' ', $slug );
+
+    // デフォルト値
+    $atts = shortcode_atts(
+      [
+        'title'  => $title,
+        'slug'   => $slug
+      ],
+      $atts
+    ); 
+
+    // タイトル文字列を作成
+    $h1    = '<h1 class="main__titleText --bottom" data-comfort="1">' . $atts['title'] . '</h1>';
+    $p     = '<p class="main__titleText --top" data-comfort="1">' . $atts['slug'] . '</p>';
+    $html  = '<div class="main__titleArea"><div class="main__title">' . $h1 . $p . '</div></div>';
+    return $html;
     
   }
 
@@ -262,8 +286,8 @@ trait Shortcodes {
     // デフォルト値
     $atts = shortcode_atts(
       [
-        'year' => '2019',
-        'text' => 'Qwel'
+        'year' => '2015',
+        'text' => '福井市越前海岸盛り上げ隊'
       ],
       $atts
     );
