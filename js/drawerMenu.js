@@ -171,8 +171,9 @@ class DrawerMenu {
 
 
   _handleEvents() {
-    const myTouch = 'ontouchend' in document && window.innerWidth < 1024 ? 'touchend' : 'click';
-
+    //const myTouch = 'ontouchend' in document && window.innerWidth < 1024 ? 'touchend' : 'click';
+    const myTouch = 'click';
+    
     // ドロワーのイベント登録
     this._drawer.addEventListener(myTouch, (event) => {
       event.preventDefault();
