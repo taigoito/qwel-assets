@@ -66,6 +66,9 @@ class Qwel_Assets {
 
   public function enqueue_scripts() {
     // バージョン情報
+    if( !function_exists( 'get_plugin_data' ) ) {
+      require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    }
     $plugin_data = get_plugin_data( __FILE__ );
     $version     = $plugin_data['Version'];
 
