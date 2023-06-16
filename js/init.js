@@ -5,6 +5,10 @@
  * @package Qwel-Assets
  */
 
+// Back To Top
+import BackToTop from './_backToTop.js';
+new BackToTop();
+
 // Drawer Menu
 import DrawerMenu from './_drawerMenu.js';
 new DrawerMenu();

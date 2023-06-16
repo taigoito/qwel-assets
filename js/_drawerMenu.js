@@ -92,6 +92,7 @@ export default class DrawerMenu {
     this.isShown = true;
 
   }
+  
 
   hide() {
     // 非表示
