@@ -32,6 +32,12 @@
     transition: .25s all ease-in-out;
   }
 
+  &__navicon.icon {
+    border-radius: 50%;
+    background-color: $primary;
+    color: $white;
+  }
+
   &__navicon {
     opacity: 0;
     transform: rotate(-45deg);
@@ -54,7 +60,7 @@
 
   &.--dark {
     .drawer__navicon {
-      color: $primary;
+      //color: $primary;
     }
     
     .drawer__close {

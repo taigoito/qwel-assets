@@ -1,5 +1,5 @@
 <?php
-namespace Qwel_Assets;
+namespace OkuetuManmaru_Assets;
 
 trait Shortcodes {
   // ショートコード登録
@@ -263,7 +263,7 @@ trait Shortcodes {
     $atts = shortcode_atts(
       [
         'year' => '2019',
-        'text' => 'Qwel'
+        'text' => 'OkuetuManmaru'
       ],
       $atts
     );

@@ -1,5 +1,5 @@
 {
-  "name": "qwel-assets",
+  "name": "qwel-okuetu-manmaru-assets",
   "version": "1.0.0",
   "description": "",
   "main": "init.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/taigoito/qwel-assets.git"
+    "url": "git+https://github.com/taigoito/qwel-okuetu-manmaru-assets.git"
   },
   "author": "Taigo Ito",
   "license": "GPL",
   "bugs": {
-    "url": "https://github.com/taigoito/qwel-assets/issues"
+    "url": "https://github.com/taigoito/qwel-okuetu-manmaru-assets/issues"
   },
-  "homepage": "https://github.com/taigoito/qwel-assets#readme"
+  "homepage": "https://github.com/taigoito/qwel-okuetu-manmaru-assets#readme"
 }

@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Qwel Assets
-Description: This is an asset when using the theme "Qwel".
+Plugin Name: Okuetu Manmaru Assets
+Description: This is an asset when using the theme "Okuetu Manmaru".
 Version: 1.0
 Requires PHP: 7.4
 Author: Taigo Ito
@@ -17,8 +17,8 @@ defined( 'ABSPATH' ) || exit;
 /*
  * プラグインのパス, URI
  */
-define( 'QWEL_ASSETS_DIR', WP_PLUGIN_DIR . '/qwel-assets/' );
-define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
+define( 'OkuetuManmaru_ASSETS_DIR', WP_PLUGIN_DIR . '/okuetu-manmaru-assets/' );
+define( 'OkuetuManmaru_ASSETS_URI', WP_PLUGIN_URL . '/okuetu-manmaru-assets/' );
 
 
 /*
@@ -26,18 +26,18 @@ define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
  */
 spl_autoload_register(
 	function( $classname ) {
-		if ( strpos( $classname, 'Qwel_Assets' ) === false ) return;
+		if ( strpos( $classname, 'OkuetuManmaru_Assets' ) === false ) return;
 		$classname = str_replace( '\\', '/', $classname );
-		$classname = str_replace( 'Qwel_Assets/', '', $classname );
-		$file      = QWEL_ASSETS_DIR . '/classes/' . $classname . '.php';
+		$classname = str_replace( 'OkuetuManmaru_Assets/', '', $classname );
+		$file      = OkuetuManmaru_ASSETS_DIR . '/classes/' . $classname . '.php';
 		if ( file_exists( $file ) ) {
 			require $file;
 		}
 	}
 );
 
-class Qwel_Assets {
-  use \Qwel_Assets\Shortcodes;
+class OkuetuManmaru_Assets {
+  use \OkuetuManmaru_Assets\Shortcodes;
 		
 	public function __construct() {
     // ブロックスタイルを追加 (エディター)
@@ -95,4 +95,4 @@ class Qwel_Assets {
 
 }
 
-new Qwel_Assets();
+new OkuetuManmaru_Assets();

@@ -16,8 +16,7 @@
     }
   }
   
-  // .slider直下にギャラリー(style:Slider Items)を設置して使用する
-  .is-style-slider-items {
+  &__inner {
     display: flex;
     align-items: center;
     height: 100%;
@@ -25,7 +24,7 @@
     margin-bottom: 0;
     transform: translateX(0);
 
-    .wp-block-image {
+    .wp-block-post {
       position: relative;
       flex: 0 1 auto;
       order: 0;
@@ -35,39 +34,6 @@
       
       &:not(.--current) {
         opacity: .5;
-      }
-
-      img {
-        width: 83.33vmin;
-        aspect-ratio: 1 / $sliderAspectRatio;
-        object-fit: cover;
-        margin: 0;
-  
-        @media (min-width: $breakpoint) {
-          @each $key, $height in $sliderHeights {
-            @at-root .slider.--#{$key} .slider__item img {
-              width: auto;
-              height: $height;
-            }
-          }
-        }
-      }
-
-      .wp-element-caption {
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        padding: space(2) space(3);
-        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));
-        color: $white;
-        font-size: $h4FontSize;
-        text-align: center;
-
-        a {
-          display: block;
-          color: $white;
-        }
       }
     }
   }

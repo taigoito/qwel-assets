@@ -53,7 +53,7 @@ $backBtnHoverColor:    $white;
 
 // Drawer Menu
 $drawerAlwaysShown:    false !default;
-$drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
+$drawerPad:            1.5rem !default;
 $drawerHeight:         48px !default;
 $drawerMenuDarkBg:     $primary !default;
 
@@ -65,9 +65,9 @@ $preloaderHeight:      100vh !default;
 $preloaderBg:          $primary !default;
 
 // Slider
-$sliderAspectRatio:    5 / 8 !default;
+$sliderAspectRatio:    5 / 4 !default;
 $sliderHeights:        (
-  sm:                    12rem,
-  md:                    18rem,
-  lg:                    24rem
+  sm:                    18rem,
+  md:                    24rem,
+  lg:                    36rem
 ) !default;

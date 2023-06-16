@@ -7,6 +7,12 @@
 
 (() => {
 
+  // Fader
+  wp.blocks.registerBlockStyle('core/gallery', {
+    name: 'fader-items',
+    label: 'Fader Items'
+  });
+
   // Slider
   // wp:group.slider で囲んで使用する
   wp.blocks.registerBlockStyle('core/gallery', {
