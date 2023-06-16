@@ -23,6 +23,13 @@ $whiten:               invert(1) grayscale(1) brightness(4) !default;
 // Breakpoint
 $breakpoint:           900px !default;
 
+// Back To Top
+$backBtnBg:            $primary;
+$backBtnColor:         $white;
+$backBtnHoverBg:       $primaryLight;
+$backBtnHoverColor:    $white;
+
+
 // Drawer Menu
 $drawerAlwaysShown:    false !default;
 $drawerPad:            space(2) !default;

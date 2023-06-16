@@ -1,0 +1,35 @@
+/**
+ * Component - Back To Top
+ */
+
+.backToTop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1110;
+  display: block;
+  width: calc(#{$drawerPad * 2} + #{$drawerHeight});
+  height: calc(#{$drawerPad * 2} + #{$drawerHeight});
+  padding: 0; // Reset
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
+
+  .icon {
+    position: absolute;
+    right: $drawerPad;
+    bottom: $drawerPad;
+    width: $drawerHeight;
+    height: $drawerHeight;
+    border-radius: 50%;
+    background-color: $backBtnBg;
+    color: $backBtnColor;
+  }
+
+  &:hover .icon {
+    background-color: $backBtnHoverBg;
+    color: $backBtnHoverColor;
+  }
+}

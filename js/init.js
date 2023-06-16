@@ -4,6 +4,10 @@
  * Location: Fukui, Japan
  */
 
+// Back To Top
+//import BackToTop from './js/_backToTop.js';
+new BackToTop();
+
 // Drawer Menu
 //import DrawerMenu from './js/_drawerMenu.js';
 new DrawerMenu();

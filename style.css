@@ -236,6 +236,39 @@ button, input, select, textarea {
 }
 
 /**
+ * Component - Back To Top
+ */
+.backToTop {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1110;
+  display: block;
+  width: calc(1.5rem + 48px);
+  height: calc(1.5rem + 48px);
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+  outline: 0;
+  cursor: pointer;
+}
+.backToTop .icon {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #3399cc;
+  color: #ffffff;
+}
+.backToTop:hover .icon {
+  background-color: #85c2e0;
+  color: #ffffff;
+}
+
+/**
  * Component - Button
  */
 .btn {
@@ -251,7 +284,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
@@ -551,7 +583,6 @@ button, input, select, textarea {
   outline: 0;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
   cursor: pointer;
   transition: all 0.25s ease-in-out;
