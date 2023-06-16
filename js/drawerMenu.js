@@ -2,7 +2,6 @@
  * Drawer Menu
  * Author: Taigo Ito (https://qwel.design/)
  * Location: Fukui, Japan
- * @package Qwel-Two
  */
 
 class DrawerMenu {
@@ -92,6 +91,7 @@ class DrawerMenu {
     this.isShown = true;
 
   }
+  
 
   hide() {
     // 非表示
