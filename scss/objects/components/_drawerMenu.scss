@@ -53,6 +53,10 @@
   }
 
   &.--dark {
+    .drawer__navicon {
+      color: $primary;
+    }
+    
     .drawer__close {
       color: $white;
     }
