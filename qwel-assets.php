@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Qwel Assets Beta
+Plugin Name: Qwel Assets
 Description: This is an asset when using the theme "Qwel".
 Version: 1.0
 Requires PHP: 7.4

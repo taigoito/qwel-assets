@@ -52,16 +52,38 @@ export default class Slider {
 
   // 再生
   startInterval() {
-    this.intervalId = setInterval(() => {
-      if (!this.isAnimated) this.move(1);
-    }, this._interval);
+    this._isPlay = true;
+    this._timeStart = null;
+    this._loop(performance.now());
 
   }
 
 
   // 停止
   stopInterval() {
-    clearInterval(this.intervalId);
+    this._isPlay = false;
+
+  }
+
+
+  _loop(timeCurrent) {
+    if (!this._timeStart) {
+      this._timeStart = timeCurrent;
+    }
+    const timeElapsed = timeCurrent - this._timeStart;
+
+    timeElapsed < this._interval
+      ? window.requestAnimationFrame(this._loop.bind(this))
+      : this._done();
+
+  }
+
+
+  _done() {
+    if (this._isPlay) {
+      this.startInterval();
+      this.move(1);
+    }
 
   }
 
@@ -97,7 +119,7 @@ export default class Slider {
     this._flickDistance = this._stop - this._start;
     this._currentDuration = duration;
     this._timeStart = false;
-    this._loop(performance.now());
+    this._moving(performance.now());
 
   }
 
@@ -396,7 +418,7 @@ export default class Slider {
   }
 
 
-  _loop(timeCurrent) {
+  _moving(timeCurrent) {
     if (!this._timeStart) {
       this._timeStart = timeCurrent;
     }
@@ -406,13 +428,13 @@ export default class Slider {
     this._inner.style.transform = `translateX(${next}px)`;
 
     timeElapsed < this._currentDuration
-      ? window.requestAnimationFrame(this._loop.bind(this))
-      : this._done();
+      ? window.requestAnimationFrame(this._moving.bind(this))
+      : this._moved();
 
   }
 
 
-  _done() {
+  _moved() {
     this._inner.style.transform = `translateX(${this._start + this._flickDistance}px)`;
     this.timeStart = false;
     this.isAnimated = false;

@@ -5,7 +5,7 @@
   position: fixed;
   right: 0;
   bottom: 0;
-  z-index: 1110;
+  z-index: 1000;
   display: block;
   width: calc(1.5rem + 48px);
   height: calc(1.5rem + 48px);
@@ -129,6 +129,9 @@
   transform: rotate(45deg);
 }
 
+.drawer.--dark .drawer__navicon {
+  color: #3399cc;
+}
 .drawer.--dark .drawer__close {
   color: var(--wp--preset--color--white, #ffffff);
 }
