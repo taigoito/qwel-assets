@@ -34,20 +34,43 @@ class Fader {
 
   // 再生
   startInterval() {
-    this.intervalId = setInterval(() => {
-      this._fade();
-    }, this._interval);
+    this._isPlay = true;
+    this._timeStart = null;
+    this._loop(performance.now());
 
   }
 
 
   // 停止
   stopInterval() {
-    clearInterval(this.intervalId);
+    this._isPlay = false;
 
   }
 
-  _fade() {
+
+  _loop(timeCurrent) {
+    if (!this._timeStart) {
+      this._timeStart = timeCurrent;
+    }
+    const timeElapsed = timeCurrent - this._timeStart;
+
+    timeElapsed < this._interval
+      ? window.requestAnimationFrame(this._loop.bind(this))
+      : this._done();
+
+  }
+
+
+  _done() {
+    if (this._isPlay) {
+      this.startInterval();
+      this.fade();
+    }
+
+  }
+
+
+  fade() {
     // 最前面(prev)と最背面(current)の要素をそれぞれ取得
     const prev = this._items[this._currentIndex - 1];
     const current = this._items[this._currentIndex++] || this._items[0];
