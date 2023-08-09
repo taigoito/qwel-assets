@@ -22,17 +22,17 @@ import EvilIcons from './_evilIcons.js';
 new EvilIcons();
 
 // Fader
-import Fader from './_fader.js';
-new Fader();
+//import Fader from './_fader.js';
+//new Fader();
 
 // Preloader
-import Preloader from './_preloader.js';
-new Preloader();
+//import Preloader from './_preloader.js';
+//new Preloader();
 
 // Responsive Color
-import ResponsiveColor from './_responsiveColor.js';
-new ResponsiveColor();
+//import ResponsiveColor from './_responsiveColor.js';
+//new ResponsiveColor();
 
 // Slider
-import Slider from './_slider.js';
-new Slider();
+//import Slider from './_slider.js';
+//new Slider();

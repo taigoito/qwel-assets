@@ -52,15 +52,15 @@
     }
   }
 
-  &.--dark {
+  //&.--dark {
     .drawer__navicon {
-      color: $primary;
+      color: $primaryDark;
     }
     
     .drawer__close {
-      color: $white;
+      color: $primaryDark;
     }
-  }
+  //}
 }
 
 .drawerMenu {
@@ -72,7 +72,7 @@
   width: clamp(18rem, 40%, 24rem);
   height: 100%;
   margin: auto;
-  background-color: $lighter;
+  background-color: $secondaryLight;
   text-align: center;
   transition: width ease-in-out .25s;
   
@@ -137,6 +137,10 @@
       img {
         width: 100%;
         height: auto;
+      }
+
+      svg {
+        fill: $primaryDark;
       }
     }
 

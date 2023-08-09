@@ -7,10 +7,11 @@ $dark:                 var(--wp--preset--color--dark, #808080) !default;
 $light:                var(--wp--preset--color--light, #b3b3b3) !default;
 $lighter:              var(--wp--preset--color--lighter, #d9d9d9) !default;
 $lightest:             var(--wp--preset--color--lightest, #ffffff) !default;
-$primary:              var(--wp--preset--color--primary, #3399cc) !default;
-$primaryLight:         var(--wp--preset--color--primary-light, #85c2e0) !default;
-$secondary:            var(--wp--preset--color--secondary, #cc334b) !default;
-$secondaryLight:       var(--wp--preset--color--secondary-light, #e08594) !default;
+$primaryDark:          var(--wp--preset--color--primary-dark, #00572d) !default;
+$primary:              var(--wp--preset--color--primary, #239a0e) !default;
+$primaryLight:         var(--wp--preset--color--primary-light, #b0d52a) !default;
+$secondary:            var(--wp--preset--color--secondary, #a98047) !default;
+$secondaryLight:       var(--wp--preset--color--secondary-light, #fbf6ce) !default;
 $black:                var(--wp--preset--color--black, #000000) !default;
 $white:                var(--wp--preset--color--white, #ffffff) !default;
 $linkColor:            $darker !default;
@@ -43,17 +44,17 @@ $blur:                 brightness(0.85) blur(1px) !default;
 $whiten:               invert(1) grayscale(1) brightness(4) !default;
 
 // Breakpoint
-$breakpoint:           900px !default;
+$breakpoint:           1200px !default;
 
 // Back To Top
-$backBtnBg:            $primary;
+$backBtnBg:            $primaryDark;
 $backBtnColor:         $white;
-$backBtnHoverBg:       $primaryLight;
+$backBtnHoverBg:       $primary;
 $backBtnHoverColor:    $white;
 
 // Drawer Menu
 $drawerAlwaysShown:    false !default;
-$drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
+$drawerPad:            1.5rem !default;  // calc関数を使用するためCSS変数を避ける
 $drawerHeight:         48px !default;
 $drawerMenuDarkBg:     $primary !default;
 
@@ -65,9 +66,9 @@ $preloaderHeight:      100vh !default;
 $preloaderBg:          $primary !default;
 
 // Slider
-$sliderAspectRatio:    5 / 8 !default;
+$sliderAspectRatio:    1 / 2 !default;
 $sliderHeights:        (
-  sm:                    12rem,
-  md:                    18rem,
-  lg:                    24rem
+  sm:                    15rem,
+  md:                    22.5rem,
+  lg:                    30rem
 ) !default;
