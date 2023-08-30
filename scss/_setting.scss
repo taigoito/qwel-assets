@@ -46,14 +46,14 @@ $whiten:               invert(1) grayscale(1) brightness(4) !default;
 $breakpoint:           900px !default;
 
 // Back To Top
-$backBtnBg:            $primary;
-$backBtnColor:         $white;
-$backBtnHoverBg:       $primaryLight;
-$backBtnHoverColor:    $white;
+$backBtnBg:            transparent;
+$backBtnColor:         $darkest;
+$backBtnHoverBg:       transparent;
+$backBtnHoverColor:    $dark;
 
 // Drawer Menu
-$drawerAlwaysShown:    false !default;
-$drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
+$drawerAlwaysShown:    true !default;
+$drawerPad:            1.5rem !default;  // calc関数を使用するためCSS変数を避ける
 $drawerHeight:         48px !default;
 $drawerMenuDarkBg:     $primary !default;
 

@@ -23,13 +23,17 @@
     bottom: $drawerPad;
     width: $drawerHeight;
     height: $drawerHeight;
+    border: 2px solid $darkest;
     border-radius: 50%;
     background-color: $backBtnBg;
     color: $backBtnColor;
   }
 
-  &:hover .icon {
-    background-color: $backBtnHoverBg;
-    color: $backBtnHoverColor;
+  &:hover {
+    .icon {
+      border-color: $dark;
+      background-color: $backBtnHoverBg;
+      color: $backBtnHoverColor;
+    }
   }
 }
