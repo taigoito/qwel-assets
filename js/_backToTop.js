@@ -22,11 +22,13 @@ export default class BackToTop {
 
     // イベント登録
     this._handleEvents();
+
   }
 
 
   backToTop() {
-    window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({ top: 0, behavior: 'smooth' });
+
   }
 
 
@@ -38,6 +40,7 @@ export default class BackToTop {
       event.preventDefault();
       this.backToTop();
     });
+    
   }
 
 }

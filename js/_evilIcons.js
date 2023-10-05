@@ -21,16 +21,16 @@ export default class EvilIcons {
 
   _icon(name, options) {
     var options = options || {};
-    var size    = options.size ? "icon--" + options.size : "";
-    var klass   = "icon icon--" + name + " " + size + " " + (options.class || "");
+    var size = options.size ? "icon--" + options.size : "";
+    var klass = "icon icon--" + name + " " + size + " " + (options.class || "");
 
-    var icon =  "<svg class='icon__cnt'>" +
-                  "<use xlink:href='#" + name + "-icon' />" +
-                "</svg>";
+    var icon = "<svg class='icon__cnt'>" +
+      "<use xlink:href='#" + name + "-icon' />" +
+      "</svg>";
 
-    var html =  "<div class='" + klass + "'>" +
-                  this._wrapSpinner(icon, klass) +
-                "</div>";
+    var html = "<div class='" + klass + "'>" +
+      this._wrapSpinner(icon, klass) +
+      "</div>";
 
     return html;
   }
@@ -49,15 +49,15 @@ export default class EvilIcons {
 
     for (var i = 0; i < icons.length; i++) {
       var currentIcon = icons[i];
-      var name        = currentIcon.getAttribute("data-icon");
+      var name = currentIcon.getAttribute("data-icon");
       var options = {
-        class:  currentIcon.className,
-        size:   currentIcon.getAttribute("data-size")
+        class: currentIcon.className,
+        size: currentIcon.getAttribute("data-size")
       };
 
       currentIcon.insertAdjacentHTML("beforebegin", this._icon(name, options));
       currentIcon.parentNode.removeChild(currentIcon);
     }
   }
-  
+
 }
