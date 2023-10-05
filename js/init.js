@@ -5,33 +5,33 @@
  */
 
 // Back To Top
-//import BackToTop from './js/_backToTop.js';
+//import BackToTop from './backToTop.js';
 new BackToTop();
 
 // Drawer Menu
-//import DrawerMenu from './js/_drawerMenu.js';
+//import DrawerMenu from './drawerMenu.js';
 new DrawerMenu();
 
 // Embed
-//import Embed from './js/embed.js';
+//import Embed from './embed.js';
 new Embed();
 
 // Evil Icons
-//import EvilIcons from './js/_evilIcons.js';
+//import EvilIcons from './evilIcons.js';
 new EvilIcons();
 
 // Fader
-//import Fader from './js/fader.js';
+//import Fader from './fader.js';
 new Fader();
 
 // Preloader
-//import Preloader from './js/preloader.js';
+//import Preloader from './preloader.js';
 new Preloader();
 
 // Responsive Color
-//import ResponsiveColor from './js/responsiveColor.js';
+//import ResponsiveColor from './responsiveColor.js';
 new ResponsiveColor();
 
 // Slider
-//import Slider from './js/slider.js';
+//import Slider from './slider.js';
 new Slider();

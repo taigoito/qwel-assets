@@ -5,17 +5,17 @@
  */
 
 class DrawerMenu {
-  
+
   constructor(options = {}) {
     // 設定
     this.darkMode = options.darkMode || false;
 
     // クローンする対象
-    this._siteBrand = options.siteBrand || 
+    this._siteBrand = options.siteBrand ||
       document.querySelector('.gNav__siteBrand');
-    this._primaryMenu = options.primaryMenu || 
+    this._primaryMenu = options.primaryMenu ||
       document.querySelector('.gNav__primaryMenu');
-    this._socialMenu = options.socialMenu || 
+    this._socialMenu = options.socialMenu ||
       document.querySelector('.gNav__socialMenu');
 
     // 各要素生成
@@ -91,7 +91,7 @@ class DrawerMenu {
     this.isShown = true;
 
   }
-  
+
 
   hide() {
     // 非表示
@@ -138,7 +138,7 @@ class DrawerMenu {
     // プライマリメニューをインポート
     const primaryMenu = document.createElement('ul');
     primaryMenu.classList.add('drawerMenu__primaryMenu');
-    
+
     // li要素を順次インポート
     const menuItems = this._primaryMenu.querySelectorAll('li');
     menuItems.forEach((menuItem) => {
@@ -156,7 +156,7 @@ class DrawerMenu {
     // ソーシャルメニューをインポート
     const socialMenu = document.createElement('ul');
     socialMenu.classList.add('drawerMenu__socialMenu');
-    
+
     // li要素を順次インポート
     const menuItems = this._socialMenu.querySelectorAll('li');
     menuItems.forEach((menuItem) => {

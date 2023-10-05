@@ -14,14 +14,14 @@ class Fader {
     if (!this._items.length || this._items.length <= 1) return;
 
     // 表示間隔
-    this._interval = this._elem.dataset.interval || 5000;
+    this.interval = this._elem.dataset.interval || 5000;
 
     // 各状態管理
-    this._currentIndex = 1; // 2枚目から操作
-    this._itemsCount = this._items.length;
+    this.currentIndex = 1; // 2枚目から操作
+    this.itemsCount = this._items.length;
 
     // 2番目以降の要素を背面に移動し、フェードさせておく
-    for (let i = 1; i < this._itemsCount; i++) {
+    for (let i = 1; i < this.itemsCount; i++) {
       this._items[i].style.zIndex--;
       this._items[i].classList.add('--fade');
     }
@@ -34,7 +34,7 @@ class Fader {
 
   // 再生
   startInterval() {
-    this._isPlay = true;
+    this.isPlay = true;
     this._timeStart = null;
     this._loop(performance.now());
 
@@ -43,7 +43,7 @@ class Fader {
 
   // 停止
   stopInterval() {
-    this._isPlay = false;
+    this.isPlay = false;
 
   }
 
@@ -54,7 +54,7 @@ class Fader {
     }
     const timeElapsed = timeCurrent - this._timeStart;
 
-    timeElapsed < this._interval
+    timeElapsed < this.interval
       ? window.requestAnimationFrame(this._loop.bind(this))
       : this._done();
 
@@ -62,7 +62,7 @@ class Fader {
 
 
   _done() {
-    if (this._isPlay) {
+    if (this.isPlay) {
       this.startInterval();
       this.fade();
     }
@@ -72,10 +72,10 @@ class Fader {
 
   fade() {
     // 最前面(prev)と最背面(current)の要素をそれぞれ取得
-    const prev = this._items[this._currentIndex - 1];
-    const current = this._items[this._currentIndex++] || this._items[0];
+    const prev = this._items[this.currentIndex - 1];
+    const current = this._items[this.currentIndex++] || this._items[0];
     // 1番下の要素を最前面へ移動
-    if (!(this._currentIndex > this._itemsCount)) current.style.zIndex++;
+    if (!(this.currentIndex > this.itemsCount)) current.style.zIndex++;
     this._transitionEnd(current, () => {
       // フェードイン
       current.classList.remove('--fade');
@@ -84,11 +84,11 @@ class Fader {
       prev.classList.add('--fade');
     });
     // インデックスが最大に達したとき
-    if (this._currentIndex > this._itemsCount) {
-      for (let i = 1; i < this._itemsCount; i++) {
+    if (this.currentIndex > this.itemsCount) {
+      for (let i = 1; i < this.itemsCount; i++) {
         this._items[i].style.zIndex--; // // zIndexを戻す
       }
-      this._currentIndex = 1; // インデックスを初期値に
+      this.currentIndex = 1; // インデックスを初期値に
     }
 
   }
@@ -107,5 +107,5 @@ class Fader {
     return promise;
 
   }
-  
+
 }

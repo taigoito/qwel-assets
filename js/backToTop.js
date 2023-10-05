@@ -21,11 +21,13 @@ class BackToTop {
 
     // イベント登録
     this._handleEvents();
+
   }
 
 
   backToTop() {
-    window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({ top: 0, behavior: 'smooth' });
+
   }
 
 
@@ -37,6 +39,7 @@ class BackToTop {
       event.preventDefault();
       this.backToTop();
     });
+    
   }
 
 }
