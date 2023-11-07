@@ -5,8 +5,8 @@
  */
 
 class Preloader {
-
-  constructor(elem) {
+  // 引数:isLoadManually true: 自動読み込みしない false: window.onloadで自動読み込み
+  constructor(elem, isLoadManually) {
     // 要素を取得
     this._elem = elem || document.querySelector('.preloader');
     if (!this._elem) return;
@@ -47,7 +47,7 @@ class Preloader {
     }, this._terminateTime);
 
     // ページ読み込みが完了したらロード
-    window.onload = () => this.load();
+    if (!isLoadManually) window.onload = () => this.load();
 
   }
 
