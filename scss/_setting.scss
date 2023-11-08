@@ -7,14 +7,15 @@ $dark:                 var(--wp--preset--color--dark, #808080) !default;
 $light:                var(--wp--preset--color--light, #b3b3b3) !default;
 $lighter:              var(--wp--preset--color--lighter, #d9d9d9) !default;
 $lightest:             var(--wp--preset--color--lightest, #ffffff) !default;
-$primary:              var(--wp--preset--color--primary, #3399cc) !default;
-$primaryLight:         var(--wp--preset--color--primary-light, #85c2e0) !default;
-$secondary:            var(--wp--preset--color--secondary, #cc334b) !default;
-$secondaryLight:       var(--wp--preset--color--secondary-light, #e08594) !default;
+$primaryDark:          var(--wp--preset--color--primary-dark, #4d000a) !default;
+$primary:              var(--wp--preset--color--primary, #7d1c29) !default;
+$primaryLight:         var(--wp--preset--color--primary-light, #ab3847) !default;
+$secondary:            var(--wp--preset--color--secondary, #dbb300) !default;
+
 $black:                var(--wp--preset--color--black, #000000) !default;
 $white:                var(--wp--preset--color--white, #ffffff) !default;
-$linkColor:            $darker !default;
-$linkHoverColor:       $primary !default;
+$linkColor:            $primary !default;
+$linkHoverColor:       $primaryLight !default;
 
 // Spacing
 $spacingValues:  (
@@ -43,7 +44,7 @@ $blur:                 brightness(0.85) blur(1px) !default;
 $whiten:               invert(1) grayscale(1) brightness(4) !default;
 
 // Breakpoint
-$breakpoint:           900px !default;
+$breakpoint:           1200px !default;
 
 // Back To Top
 $backBtnBg:            $primary;
@@ -55,14 +56,14 @@ $backBtnHoverColor:    $white;
 $drawerAlwaysShown:    false !default;
 $drawerPad:            0.75rem !default;  // calc関数を使用するためCSS変数を避ける
 $drawerHeight:         48px !default;
-$drawerMenuDarkBg:     $primary !default;
+$drawerMenuDarkBg:     $primaryDark !default;
 
 // Preloader
 $spinnerWidth:         48px !default;
 $spinnerBarsCount:     12 !default;
 $spinnerBarsBg:        $white !default; // rgba関数を使用するためCSS変数を避ける
 $preloaderHeight:      100vh !default;
-$preloaderBg:          $primary !default;
+$preloaderBg:          $primaryDark !default;
 
 // Slider
 $sliderAspectRatio:    5 / 8 !default;

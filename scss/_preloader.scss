@@ -28,7 +28,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 900; // header: 1000 より背面
+    z-index: 1100; // header: 1000 より前面
     width: 100%;
     height: $preloaderHeight;
     background: $preloaderBg;
@@ -46,8 +46,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 18rem;
-    height: 18rem;
+    width: 6rem;
+    height: 6rem;
     margin: auto;
   }
 
